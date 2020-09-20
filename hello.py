@@ -3,3 +3,9 @@ def hello():
 
 
 hello()
+
+
+def amlove():
+    print('Es un honor, estar con Obrador!')
+
+amlove()
