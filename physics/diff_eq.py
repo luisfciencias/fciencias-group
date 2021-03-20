@@ -35,8 +35,8 @@ t = np.linspace(0, 2 * np.pi, 500)
 # integrator for different parameters
 fig, axes = plt.subplots(nrows=1, ncols=3, figsize=(12, 4))  # type: Figure, list[Axes]
 for mu_param in mu_list:
-    ret = integrate.odeint(dynamical_system, y0, t, args=(mu_param,))
-    df_res = pd.DataFrame(ret, columns=['x', 'p'])
+    integrator_results = integrate.odeint(dynamical_system, y0, t, args=(mu_param,))
+    df_res = pd.DataFrame(integrator_results, columns=['x', 'p'])
     axes[0].plot(t, df_res['x'], label=r"$\mu = {}$".format(mu_param))
     axes[1].plot(t, df_res['p'])
     axes[2].plot(df_res['x'], df_res['p'])
