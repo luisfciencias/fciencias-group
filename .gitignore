@@ -130,3 +130,6 @@ dmypy.json
 
 # editor
 .idea/
+
+# output
+*.png
